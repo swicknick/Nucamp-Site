@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <title>NuCamp: A Better Way To Camp</title>
+    <!-- <style> div{
+        border: 1px solid magenta;
+    }
+    </style> -->
 </head>
 
 <body>
@@ -30,6 +34,9 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col-xs-4 col-md-2 col-lg-2 col-xl-2">
+                    <a href="#reserveForm" class="btn btn-info">Reserve</a>
+                </div>
             </div>  
         </div>
     </header>
@@ -37,7 +44,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="nucampNavbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
@@ -70,12 +77,18 @@
 
     <div class="container">
             <div class="row row-content align-items-center">
-                <div class="col-sm-4 col-md-3">
-        <h2>Featured Campsites</h2>
-        </div>
-        <div class="col">
-            <h3>React Lake Campground</h3>
-            <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="col-sm-4 order-sm-first col-md-3">
+                    <h2 class="text-sm-left">Featured Campsites</h2>
+                </div>
+                <div class="col">
+                    <div class="media">
+                        <div class="media-body align-self-center">
+                            <h3>React Lake Campground</h3>
+                            <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                        </div> 
+                            <img class="d-flex mr-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake thumbnail" />   
+                    </div>
+                </div>
             </div>
         </div>    
     </div>
@@ -95,6 +108,46 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-6 col-md-8 mx-auto">
+                <div class="card">
+                    <h3 class="card-header bg-info text-white">Reserve Campsite</h3>
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="row form-group">
+                                <label class="col-sm-6" for="numCampers">Number of Campers</label>
+                                    <div class="col">
+                                        <select class="form-control col" name="numCampers" id="numCampers">
+                                        <option>Select...</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select> 
+                                    </div>
+                                </div>
+
+                            <div class="row form-group">
+                                    <label class="col-sm-6" for="date">Date</label>
+                                    <div class="col-sm-6">
+                                    <input clas="form-control" type="date" id="date" name="date"                placeholder="date">
+                                    </div>
+                                </div>
+
+                            <div class="row form-group">
+                                <div class="col">
+                                    <button class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>               
+            </div>
+        </div>    
     </div>
 
     <footer class="site-footer">
